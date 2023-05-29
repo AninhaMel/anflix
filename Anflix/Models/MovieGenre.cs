@@ -1,3 +1,5 @@
+using AnFlix.Models;
+
 namespace Anflix.Models;
 
     public class MovieGenre
