@@ -1,13 +1,19 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Anflix.Models;
 
-namespace AnFlix.Models;
+namespace AnflixFlix.Models;
 
+[Table("Genre")]
 public class Genre
 {
-    [Key] //Define a propriedade como Chave Primária. 
-    public byte Id {get; set; }
-
-    [Required] //Requerido - Not Null; Validação.
-    [StringLength(30)] // Tamanho máximo da propriedade.
-    public string Name { get; set; }
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    public byte Id { get; set; }
+    
+    [Display(Name = "Nome")]
+    [Required(ErrorMessage = "O nome do Gênero é obrigatório")]
+    [StringLength(30, ErrorMessage = "O Nome deve possuir no máximo 30 caracteres")]
+    public string Name { get; set; }    
+    public ICollection<MovieGenre> Movies { get; set; }
 }

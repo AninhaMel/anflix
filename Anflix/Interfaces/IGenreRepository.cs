@@ -1,8 +1,8 @@
-using AnFlix.Models;
+using Anflix.Models;
+using AnflixFlix.Models;
 
 namespace Anflix.Interfaces;
 
-    public interface IGenreRepository : IRepository<Genre> 
-    {
-        
-    }
+public interface IGenreRepository : IRepository<Genre>
+{
+}
