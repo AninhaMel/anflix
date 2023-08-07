@@ -1,5 +1,4 @@
 using Anflix.Models;
-using AnflixFlix.Models;
 
 namespace Anflix.Interfaces;
 

@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Anflix.Models;
 
-namespace AnflixFlix.Models;
+namespace Anflix.Models;
 
 [Table("Genre")]
 public class Genre
